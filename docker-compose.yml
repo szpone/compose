@@ -22,6 +22,13 @@ services:
     networks:
       - persistence
 
+  journal-frontend:
+    image: "journal-frontend"
+    ports:
+      - "8080:8080"
+    networks:
+      - persistence
+
 networks:
   persistence: {}
 
