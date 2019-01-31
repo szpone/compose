@@ -15,15 +15,13 @@ services:
     image: "bgjournal/api"
     ports:
       - "8000:8000"
-    volumes:
-      - "./files/bgjournal/settings.py:/bg-journal/bgjournal/settings.py"
     depends_on:
       - postgres
     networks:
       - persistence
 
   journal-frontend:
-    image: "journal-frontend"
+    image: "journalfrontend"
     ports:
       - "8080:8080"
     networks:
